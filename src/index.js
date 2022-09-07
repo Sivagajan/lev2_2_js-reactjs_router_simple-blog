@@ -2,12 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Navbar from './components/Navbar';
+import Blog from './pages/Blog'
+import DetailPage from './pages/Detail'
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Navbar />
+      <Routes>
+        <Route path='/' element={<App />}/>
+        <Route path='/blog' element={<Blog />}/>
+        <Route path='/blog/:detail' element={<DetailPage />}/>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

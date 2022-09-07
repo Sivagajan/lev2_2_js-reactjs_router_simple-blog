@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #0D4625;
+}
+
+.App {
+  text-align: center;
+}
+.detailPage{
+  height: 100vh;
+  align-items: center;
+  
+}
+
+.navBar{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+  a{
+    padding: 10px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+}
+
+.blogSection{
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+
+}
+
+.blogArticle{
+  margin: 30px;
+  div{
+    height:320px;
+    overflow: hidden;
+    
+    img{
+      width:100%;
+      
+    }
+  }
+}
